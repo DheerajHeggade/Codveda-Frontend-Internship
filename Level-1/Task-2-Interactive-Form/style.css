@@ -1,0 +1,425 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   PAGE
+======================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* ========================================
+   FORM CONTAINER
+======================================== */
+
+.form-container {
+    width: 100%;
+    max-width: 480px;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+
+    animation: formAppear 0.5s ease;
+}
+
+
+/* ========================================
+   FORM ANIMATION
+======================================== */
+
+@keyframes formAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-header h1 {
+    font-size: 30px;
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+.form-header p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.form-group input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #111827;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:hover {
+    border-color: #9ca3af;
+}
+
+.form-group input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* ========================================
+   PASSWORD WRAPPER
+======================================== */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 70px;
+}
+
+
+/* ========================================
+   SHOW / HIDE PASSWORD
+======================================== */
+
+.password-toggle {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: #6366f1;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 6px;
+}
+
+.password-toggle:hover {
+    color: #4f46e5;
+}
+
+
+/* ========================================
+   PASSWORD STRENGTH
+======================================== */
+
+.password-strength {
+    width: 100%;
+    height: 5px;
+
+    margin-top: 10px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#strengthBar {
+    width: 0;
+    height: 100%;
+
+    background: transparent;
+
+    border-radius: 10px;
+
+    transition:
+        width 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* ========================================
+   PASSWORD STRENGTH COLORS
+======================================== */
+
+#strengthBar.weak {
+    background: #dc2626;
+}
+
+#strengthBar.fair {
+    background: #f59e0b;
+}
+
+#strengthBar.good {
+    background: #16a34a;
+}
+
+#strengthBar.strong {
+    background: #15803d;
+}
+
+#strengthText {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.error-message {
+    display: block;
+
+    min-height: 18px;
+
+    margin-top: 6px;
+
+    color: #dc2626;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   INVALID INPUT
+======================================== */
+
+.form-group input.invalid {
+    border-color: #dc2626;
+    background: #fff7f7;
+}
+
+.form-group input.invalid:focus {
+    box-shadow:
+        0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+
+/* ========================================
+   VALID INPUT
+======================================== */
+
+.form-group input.valid {
+    border-color: #16a34a;
+}
+
+.form-group input.valid:focus {
+    box-shadow:
+        0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.submit-button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6366f1;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.submit-button:hover {
+    background: #4f46e5;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.25);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   SUCCESS MESSAGE
+======================================== */
+
+.success-message {
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #15803d;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    min-height: 20px;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 520px) {
+
+    .page {
+        padding: 20px 14px;
+    }
+
+    .form-container {
+        padding: 28px 22px;
+
+        border-radius: 14px;
+    }
+
+    .form-header {
+        margin-bottom: 26px;
+    }
+
+    .form-header h1 {
+        font-size: 25px;
+    }
+
+    .form-header p {
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .submit-button {
+        height: 48px;
+    }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
