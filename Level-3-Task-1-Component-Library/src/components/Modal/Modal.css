@@ -1,0 +1,107 @@
+.dextro-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.dextro-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+  outline: none;
+  animation: dextro-modal-in 0.2s ease-out;
+}
+
+.dextro-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dextro-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.dextro-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #4b5563;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dextro-modal-close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.dextro-modal-close:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+
+.dextro-modal-content {
+  padding: 22px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.dextro-modal-content p {
+  margin: 0;
+}
+
+.dextro-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 22px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+@keyframes dextro-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .dextro-modal-overlay {
+    padding: 16px;
+  }
+
+  .dextro-modal {
+    max-height: calc(100vh - 32px);
+  }
+}

@@ -1,0 +1,60 @@
+.dextro-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 999px;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Sizes */
+
+.dextro-badge-small {
+  padding: 5px 9px;
+  font-size: 11px;
+}
+
+.dextro-badge-medium {
+  padding: 7px 12px;
+  font-size: 13px;
+}
+
+.dextro-badge-large {
+  padding: 9px 15px;
+  font-size: 14px;
+}
+
+/* Variants */
+
+.dextro-badge-default {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.dextro-badge-primary {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.dextro-badge-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.dextro-badge-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.dextro-badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.dextro-badge-info {
+  background: #dbeafe;
+  color: #1e40af;
+}

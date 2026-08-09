@@ -1,0 +1,86 @@
+.dextro-button {
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.dextro-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.dextro-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.dextro-button:focus-visible {
+  outline: 3px solid #8b5cf6;
+  outline-offset: 3px;
+}
+
+.dextro-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Variants */
+
+.dextro-button-primary {
+  background: #7c3aed;
+  color: white;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+}
+
+.dextro-button-primary:hover:not(:disabled) {
+  background: #6d28d9;
+}
+
+.dextro-button-secondary {
+  background: #111827;
+  color: white;
+}
+
+.dextro-button-secondary:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.dextro-button-outline {
+  background: transparent;
+  color: #7c3aed;
+  border: 1px solid #7c3aed;
+}
+
+.dextro-button-outline:hover:not(:disabled) {
+  background: #f5f3ff;
+}
+
+.dextro-button-ghost {
+  background: transparent;
+  color: #374151;
+}
+
+.dextro-button-ghost:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+/* Sizes */
+
+.dextro-button-small {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.dextro-button-medium {
+  padding: 11px 18px;
+  font-size: 14px;
+}
+
+.dextro-button-large {
+  padding: 14px 24px;
+  font-size: 16px;
+}

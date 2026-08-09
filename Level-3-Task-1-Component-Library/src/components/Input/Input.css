@@ -1,0 +1,68 @@
+.dextro-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.dextro-input-label {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dextro-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dextro-input::placeholder {
+  color: #9ca3af;
+}
+
+.dextro-input:hover:not(:disabled) {
+  border-color: #9ca3af;
+}
+
+.dextro-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.dextro-input:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.dextro-input-error {
+  border-color: #dc2626;
+}
+
+.dextro-input-error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.dextro-input-message {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.dextro-input-error-text {
+  color: #dc2626;
+}
