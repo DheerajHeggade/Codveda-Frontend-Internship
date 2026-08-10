@@ -1,3 +1,6 @@
+import AdvancedAnimations from "./AdvancedAnimations";
+import AnimationTimeline from "./AnimationTimeline";
+
 import {
   Alert,
   Badge,
@@ -11,6 +14,8 @@ import "./App.css";
 function App() {
   return (
     <div className="showcase">
+
+      {/* HEADER */}
       <header className="showcase-header">
         <div>
           <span className="showcase-eyebrow">
@@ -30,13 +35,18 @@ function App() {
         </Badge>
       </header>
 
+
+      {/* MAIN CONTENT */}
       <main className="showcase-content">
+
+        {/* 01 — BUTTONS */}
         <section className="showcase-section">
           <div className="section-title">
             <span>01</span>
 
             <div>
               <h2>Buttons</h2>
+
               <p>
                 Flexible actions with multiple variants
                 and sizes.
@@ -65,12 +75,15 @@ function App() {
           </Card>
         </section>
 
+
+        {/* 02 — INPUTS */}
         <section className="showcase-section">
           <div className="section-title">
             <span>02</span>
 
             <div>
               <h2>Inputs</h2>
+
               <p>
                 Accessible form controls with validation
                 states.
@@ -107,12 +120,15 @@ function App() {
           </Card>
         </section>
 
+
+        {/* 03 — BADGES */}
         <section className="showcase-section">
           <div className="section-title">
             <span>03</span>
 
             <div>
               <h2>Badges</h2>
+
               <p>
                 Compact indicators for status and
                 categorization.
@@ -149,12 +165,15 @@ function App() {
           </Card>
         </section>
 
+
+        {/* 04 — ALERTS */}
         <section className="showcase-section">
           <div className="section-title">
             <span>04</span>
 
             <div>
               <h2>Alerts</h2>
+
               <p>
                 Clear feedback for important system
                 messages.
@@ -194,12 +213,15 @@ function App() {
           </div>
         </section>
 
+
+        {/* 05 — CARD COMPOSITION */}
         <section className="showcase-section">
           <div className="section-title">
             <span>05</span>
 
             <div>
               <h2>Card composition</h2>
+
               <p>
                 Components can be combined to create
                 larger interfaces.
@@ -208,6 +230,7 @@ function App() {
           </div>
 
           <div className="card-grid">
+
             <Card
               title="AI Workspace"
               description="Build faster with intelligent tools."
@@ -225,6 +248,7 @@ function App() {
               </p>
             </Card>
 
+
             <Card
               title="Component Library"
               description="Built for developers and designers."
@@ -240,10 +264,22 @@ function App() {
                 documented and customizable.
               </p>
             </Card>
+
           </div>
         </section>
+
+
+        {/* 06 — ADVANCED ANIMATIONS */}
+        <AdvancedAnimations />
+
+
+        {/* 07 — ANIMATION TIMELINE */}
+        <AnimationTimeline />
+
       </main>
 
+
+      {/* FOOTER */}
       <footer className="showcase-footer">
         <strong>DEXTRO UI</strong>
 
@@ -251,6 +287,7 @@ function App() {
           A project by Dheeraj Heggade
         </span>
       </footer>
+
     </div>
   );
 }

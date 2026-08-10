@@ -195,3 +195,87 @@ input {
 .showcase-footer {
   color: #111827;
 }
+.animation-section {
+  padding: 90px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.animation-header {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.animation-header > span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7c3aed;
+  letter-spacing: 0.15em;
+}
+
+.animation-header h2 {
+  margin: 0 0 10px;
+  font-size: 36px;
+}
+
+.animation-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.animation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.motion-card {
+  padding: 32px;
+  min-height: 220px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+}
+
+.motion-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  background: #ede9fe;
+  color: #7c3aed;
+  font-size: 22px;
+}
+
+.motion-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.motion-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .animation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .animation-header {
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-card {
+    transition: none;
+  }
+}
